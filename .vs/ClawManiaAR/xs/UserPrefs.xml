@@ -1,9 +1,16 @@
 ﻿<Properties StartupConfiguration="{7CD26BDB-B60D-2793-DC3A-161A14EB08EE}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MachineSizeControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/DailyRewards.cs">
     <Files>
-      <File FileName="Assets/Scripts/MachineSizeControl.cs" Line="8" Column="26" />
-      <File FileName="Assets/Scripts/UnityARHitScreen.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MachineSizeControl.cs" Line="21" Column="9" />
+      <File FileName="Assets/CollectionSpawner.cs" Line="25" Column="40" />
+      <File FileName="Assets/CollectionClick.cs" Line="8" Column="5" />
+      <File FileName="Assets/Scripts/Claw.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CelebSensor.cs" Line="7" Column="2" />
+      <File FileName="Assets/Scripts/GameControl.cs" Line="131" Column="53" />
+      <File FileName="Assets/Scripts/Joystick.cs" Line="18" Column="17" />
+      <File FileName="Assets/DragView.cs" Line="22" Column="49" />
+      <File FileName="Assets/DailyRewards.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
