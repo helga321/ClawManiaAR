@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{7CD26BDB-B60D-2793-DC3A-161A14EB08EE}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MachineSizeControl.cs">
+    <Files>
+      <File FileName="Assets/Scripts/MachineSizeControl.cs" Line="8" Column="26" />
+      <File FileName="Assets/Scripts/UnityARHitScreen.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
