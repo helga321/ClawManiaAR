@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{A64D7650-7E58-0E10-4410-362086F634BD}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ICloudPlugin.cs">
+    <Files>
+      <File FileName="Assets/Scripts/GoogleAdmobManager.cs" Line="9" Column="13" />
+      <File FileName="Assets/Scripts/UITestIAP.cs" Line="24" Column="17" />
+      <File FileName="Assets/Scripts/Fader.cs" Line="35" Column="27" />
+      <File FileName="Assets/Scripts/ShortCode.cs" Line="7" Column="55" />
+      <File FileName="Assets/Scripts/ICloudPlugin.cs" Line="3" Column="21" />
+      <File FileName="Assets/Scripts/PlayerData.cs" Line="28" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
