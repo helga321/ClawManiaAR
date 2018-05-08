@@ -26,6 +26,7 @@ public class DailyRewards : MonoBehaviour {
 
     void Start()
     {
+        PlayerPrefs.DeleteAll();
         GetLocalTime();
         PlayerPrefs.SetString("PlayerLoginTime", "2018-01-01-00"); //For Debugging
 
@@ -115,7 +116,7 @@ public class DailyRewards : MonoBehaviour {
             textDailyReward.text = "You Got Coins";
         } else {
             Debug.Log("Comeback tomorrow");
-            textDailyReward.text = "Comback Tomorrow";
+            textDailyReward.text = "Comeback Tomorrow";
         }
     }
 

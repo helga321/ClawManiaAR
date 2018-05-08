@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Helga.unity
-    guid: fd569588c7fdb43d09bd9d90d40136ec
+    path: Assets/Scenes/MainBhakti.unity
+    guid: e6b16e016425342fda84b1d3150b5aeb
   m_configObjects: {}

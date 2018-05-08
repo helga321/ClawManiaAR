@@ -137,12 +137,16 @@ public class GameControl : MonoBehaviour {
     }
 
     public void GetCoin (int value) {
-        int coin = PlayerPrefs.GetInt("CoinClawManiaAR", 0);
+        int coin = PlayerData.Instance.PlayerCoin;
 
         coin += value; //Example
-        PlayerPrefs.SetInt("CoinClawManiaAR", coin);
+        //PlayerPrefs.SetInt("CoinClawManiaAR", coin);
         Debug.Log("You got " + value + " Coin");
-        Debug.Log("Your have " + coin + " Coin");
+        Debug.Log("You have " + coin + " Coin");
+        PlayerData.Instance.PlayerCoin = coin;
+        #if UNITY_IOS && !UNITY_EDITOR
+        ICloudPlugin.SaveData(ShortCode.iCloud_PlayerCoin, PlayerData.Instance.PlayerCoin);
+        #endif
         PrintCoin();
     }
 
@@ -158,12 +162,12 @@ public class GameControl : MonoBehaviour {
 
     void PrintTicket () {
         int ticket = PlayerPrefs.GetInt("TicketClawManiaAR", 0);
-        textTicket.text = ticket.ToString();
+        textTicket.text = "Ticket: "+ticket.ToString();
     }
 
     void PrintCoin () {
-        int coin = PlayerPrefs.GetInt("CoinClawManiaAR", 0);
-        textCoin.text = coin.ToString();
+        //int coin = PlayerPrefs.GetInt("CoinClawManiaAR", 0);
+        textCoin.text = "Coin: " + PlayerData.Instance.PlayerCoin.ToString();
     }
 
 	void Update() {

@@ -7,14 +7,12 @@ using UnityEngine.SocialPlatforms;
 public class UITestIAP : MonoBehaviour
 {
     public Fader fader;
-    public Text textLog;
     public Text textCoin;
 
-    private int testCoinValue = 500;
+    private int testCoinValue = 5;
     // Use this for initialization
     void Start()
     {
-        InitDisplay();
         Social.localUser.Authenticate((bool success) =>
         {
             if (success)
@@ -23,13 +21,14 @@ public class UITestIAP : MonoBehaviour
                 ICloudPlugin.LoadData();
                 #endif
             }
+            InitDisplay();
             fader.FadeIn();
         });
     }
 
     void InitDisplay()
     {
-        textCoin.text = "Current coin: " + PlayerData.Instance.PlayerCoin.ToString();
+        textCoin.text = "Coin: " + PlayerData.Instance.PlayerCoin.ToString();
         UnityIAPManager.Instance.OnFinishBuyProduct += OnFinishBuyProduct;
         UnityIAPManager.Instance.OnFailToBuyProduct += OnFailToBuyProduct;
         GoogleAdmobManager.Instance.OnFinishWatchVideoAds += OnFinishWatchVideoAds;
@@ -69,7 +68,7 @@ public class UITestIAP : MonoBehaviour
 
     void OnFailToBuyProduct(string productId)
     {
-        textLog.text = productId;
+        Debug.Log(productId);
     }
 
     void OnFinishWatchVideoAds(AdEvents eventName)
@@ -92,7 +91,7 @@ public class UITestIAP : MonoBehaviour
         #if UNITY_IOS && !UNITY_EDITOR
         ICloudPlugin.SaveData(ShortCode.iCloud_PlayerCoin, PlayerData.Instance.PlayerCoin);
         #endif
-        textCoin.text = "Current coin: " + PlayerData.Instance.PlayerCoin.ToString();
+        textCoin.text = "Coin: " + PlayerData.Instance.PlayerCoin.ToString();
     }
 
 }
