@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameControl : MonoBehaviour {
 
@@ -19,6 +20,8 @@ public class GameControl : MonoBehaviour {
     public GameObject closeButton;
 	public Transform rotateRoot;
     public Transform viewRoot;
+    public Text textCoin;
+    public Text textTicket;
 	GameObject currentContent;
 
 	public ContentSpawner contentSpawner;
@@ -27,6 +30,8 @@ public class GameControl : MonoBehaviour {
 		joystick.claw = claw;
         dragView.dragRot = viewRoot;
 		BackPress ();
+        PrintCoin();
+        PrintTicket();
 	}
 
 	public void BackPress() {
@@ -123,17 +128,42 @@ public class GameControl : MonoBehaviour {
 	}
 
     public void SellCollection () {
-        int ticket = PlayerPrefs.GetInt("TicketClawManiaAR", 0);
-
-        ticket += contentPrice; //Example
-        PlayerPrefs.SetInt("TicketClawManiaAR", ticket);
-        Debug.Log("You have sold one of your collection \n you got " + contentPrice + " Ticket");
-        Debug.Log("Your have " + ticket + " Tickets");
+        GetTicket(contentPrice);
     }
 
     public void CloseContent () {
         CloseUI();
         Destroy(viewRoot.GetChild(0).gameObject);
+    }
+
+    public void GetCoin (int value) {
+        int coin = PlayerPrefs.GetInt("CoinClawManiaAR", 0);
+
+        coin += value; //Example
+        PlayerPrefs.SetInt("CoinClawManiaAR", coin);
+        Debug.Log("You got " + value + " Coin");
+        Debug.Log("Your have " + coin + " Coin");
+        PrintCoin();
+    }
+
+    public void GetTicket (int value) {
+        int ticket = PlayerPrefs.GetInt("TicketClawManiaAR", 0);
+
+        ticket += value; //Example
+        PlayerPrefs.SetInt("TicketClawManiaAR", ticket);
+        Debug.Log("You have sold one of your collection \n you got " + value + " Ticket");
+        Debug.Log("Your have " + ticket + " Tickets");
+        PrintTicket();
+    }
+
+    void PrintTicket () {
+        int ticket = PlayerPrefs.GetInt("TicketClawManiaAR", 0);
+        textTicket.text = ticket.ToString();
+    }
+
+    void PrintCoin () {
+        int coin = PlayerPrefs.GetInt("CoinClawManiaAR", 0);
+        textCoin.text = coin.ToString();
     }
 
 	void Update() {
